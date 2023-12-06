@@ -1,0 +1,122 @@
+﻿[
+  {
+    "nombre": "Whisky Escocés Añejo",
+    "precio": 60.00,
+    "marca": "Highland Mist",
+    "descripcion": "Whisky escocés de 12 años con un sabor rico y suave."
+  },
+  {
+    "nombre": "Perfume Floral Elegante",
+    "precio": 45.00,
+    "marca": "Blossom Breeze",
+    "descripcion": "Perfume de mujer con notas de jazmín y rosas, ideal para el día a día."
+  },
+  {
+    "nombre": "Reloj de Pulsera Clásico",
+    "precio": 120.00,
+    "marca": "Timeless",
+    "descripcion": "Reloj elegante con correa de cuero y esfera minimalista."
+  },
+  {
+    "nombre": "Bolso de Viaje de Cuero",
+    "precio": 150.00,
+    "marca": "Journey",
+    "descripcion": "Bolso de cuero espacioso, perfecto para viajeros frecuentes."
+  },
+  {
+    "nombre": "Gafas de Sol Aviador",
+    "precio": 80.00,
+    "marca": "SkyView",
+    "descripcion": "Gafas de sol estilo aviador con protección UV y montura ligera."
+  },
+  {
+    "nombre": "Cámara Digital Compacta",
+    "precio": 200.00,
+    "marca": "SnapShot",
+    "descripcion": "Cámara digital de alta resolución, fácil de usar y perfecta para capturar momentos especiales."
+  },
+  {
+    "nombre": "Chocolates Suizos Premium",
+    "precio": 25.00,
+    "marca": "Sweet Alps",
+    "descripcion": "Selección de chocolates suizos finos, ideal para los amantes del chocolate."
+  },
+  {
+    "nombre": "Vino Tinto Reserva",
+    "precio": 35.00,
+    "marca": "Vineyard Secrets",
+    "descripcion": "Vino tinto de reserva con un sabor profundo y envejecido en barricas de roble."
+  },
+  {
+    "nombre": "Auriculares Inalámbricos",
+    "precio": 90.00,
+    "marca": "SoundWave",
+    "descripcion": "Auriculares inalámbricos con cancelación de ruido y audio de alta fidelidad."
+  },
+  {
+    "nombre": "Crema Hidratante de Lujo",
+    "precio": 50.00,
+    "marca": "SkinGlow",
+    "descripcion": "Crema hidratante enriquecida con vitaminas y minerales para todo tipo de piel."
+  },
+  {
+    "nombre": "Corbata de Seda Italiana",
+    "precio": 40.00,
+    "marca": "Milano Mode",
+    "descripcion": "Corbata de seda italiana elegante, perfecta para negocios o eventos formales."
+  },
+  {
+    "nombre": "Eau de Toilette para Hombre",
+    "precio": 55.00,
+    "marca": "Ocean Drift",
+    "descripcion": "Fragancia masculina fresca con notas marinas y cítricas."
+  },
+  {
+    "nombre": "Pañuelo de Seda",
+    "precio": 30.00,
+    "marca": "SilkTouch",
+    "descripcion": "Pañuelo de seda ligero y colorido, un accesorio versátil para cualquier ocasión."
+  },
+  {
+    "nombre": "Tableta Electrónica",
+    "precio": 250.00,
+    "marca": "TechTab",
+    "descripcion": "Tableta electrónica de última generación, ideal para trabajo y entretenimiento."
+  },
+  {
+    "nombre": "Bolsa de Cosméticos",
+    "precio": 35.00,
+    "marca": "BeautyPack",
+    "descripcion": "Bolsa de cosméticos práctica y elegante para mantener tus esenciales de belleza organizados."
+  },
+  {
+    "nombre": "Lentes de Lectura Elegantes",
+    "precio": 70.00,
+    "marca": "ClearView",
+    "descripcion": "Lentes de lectura con diseño moderno y montura ligera para comodidad diaria."
+  },
+  {
+    "nombre": "Mochila de Viaje Resistente",
+    "precio": 100.00,
+    "marca": "Adventure Gear",
+    "descripcion": "Mochila resistente y espaciosa, ideal para viajes de aventura o uso diario."
+  },
+  {
+    "nombre": "Juego de Té de Cerámica",
+    "precio": 60.00,
+    "marca": "TeaTime",
+    "descripcion": "Elegante juego de té de cerámica con diseño tradicional."
+  },
+  {
+    "nombre": "Bufanda de Cachemira",
+    "precio": 85.00,
+    "marca": "WarmWrap",
+    "descripcion": "Bufanda de cachemira suave y cálida, perfecta para los días fríos."
+  },
+  {
+    "nombre": "Reloj Inteligente Deportivo",
+    "precio": 140.00,
+    "marca": "FitTrack",
+    "descripcion": "Reloj inteligente con funciones de seguimiento deportivo y salud."
+  }
+]

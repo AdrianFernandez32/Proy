@@ -1,0 +1,38 @@
+﻿{
+  "aeropuerto": {
+    "codigo": "ABC",
+    "nombre": "Aeropuerto Internacional ABC",
+    "ciudad": "Ciudad Y",
+    "pais": "País Z",
+    "zona_horaria": "GMT+3"
+  },
+  "informacion_del_destino": {
+    "lugares_de_interes": [
+      "Museo Nacional de Historia",
+      "Parque Central de Ciudad Y",
+      "Plaza de la Libertad",
+      "Barrio Antiguo y Mercado Artesanal"
+    ],
+    "hoteles_recomendados": [
+      {
+        "nombre": "Hotel Gran Vista",
+        "calificacion": 5,
+        "rango_de_precio": "Alto"
+      },
+      {
+        "nombre": "Posada del Sol",
+        "calificacion": 4,
+        "rango_de_precio": "Medio"
+      },
+      {
+        "nombre": "Hostal Ciudad Y",
+        "calificacion": 3,
+        "rango_de_precio": "Económico"
+      }
+    ],
+    "clima": {
+      "temperatura_promedio": "22°C",
+      "condiciones_climaticas": "Mayormente soleado con lluvias ocasionales"
+    }
+  }
+}

@@ -9,8 +9,14 @@
 
   <ItemGroup>
     <None Remove="info\" />
+    <None Remove="info\Entretainment\" />
+    <None Remove="info\DutyFree\" />
+    <None Remove="info\Info\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="info\" />
+    <Folder Include="info\Entretainment\" />
+    <Folder Include="info\DutyFree\" />
+    <Folder Include="info\Info\" />
   </ItemGroup>
 </Project>

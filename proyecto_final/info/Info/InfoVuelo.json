@@ -1,0 +1,23 @@
+﻿{
+  "numero_de_vuelo": "AB1234",
+  "aerolinea": "AirExample",
+  "aeropuerto_de_salida": {
+    "codigo": "XYZ",
+    "nombre": "Aeropuerto Internacional XYZ",
+    "ciudad": "Ciudad X",
+    "hora_de_salida_programada": "2023-12-06T08:00:00",
+    "hora_de_salida_actualizada": "2023-12-06T08:30:00",
+    "puerta_de_embarque": "12A",
+    "puerta_de_embarque_actualizada": "14B"
+  },
+  "estado_del_vuelo": "Retrasado",
+  "retraso": "30 minutos",
+  "motivo_del_retraso": "Condiciones climáticas adversas",
+  "avisos": [
+    "Se recomienda a los pasajeros llegar a la puerta de embarque actualizada 14B a las 08:00.",
+    "Por favor, estén atentos a más actualizaciones sobre la hora de salida."
+  ],
+  "tipo_de_avion": "Boeing 787",
+  "clases_disponibles": [ "Economía", "Economía Premium", "Negocios", "Primera Clase" ],
+  "servicios_disponibles": [ "Comidas", "Entretenimiento a bordo", "Wi-Fi" ]
+}
