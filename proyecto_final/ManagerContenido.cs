@@ -17,6 +17,7 @@ namespace proyecto_final
 		public void RunApp() {
 			int seleccion = this.ImprimirMenu();
 			Console.WriteLine(seleccion);
+			string response = Console.ReadLine();
 			//get informacion de la seleecion
 			//filtrar con aplicarPlugins
 			//display
@@ -24,7 +25,10 @@ namespace proyecto_final
 		}
 
 		public int ImprimirMenu() {
-			Console.WriteLine("--------------------- \n 1) peliculas \n 2) series \n 3) informacion de vuelo");
+			string[] info = { "MENU","1) Vuelo", "2) Comprar", "3) Entretenimiento" };
+			Mensaje mensaje = new Mensaje(info);
+			mensaje.ImprimirMensaje();
+
 			string response = Console.ReadLine();
 			int responseNumber = Int32.Parse(response);
 			return responseNumber;

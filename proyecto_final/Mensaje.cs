@@ -3,10 +3,18 @@ namespace proyecto_final
 {
 	public class Mensaje:IMensaje
 	{
-		public Mensaje()
+		string[] infoList;
+		public Mensaje(string[] infoList)
 		{
+			this.infoList = infoList;
 		}
-		public void ImprimirMensaje() { 
+
+		public void ImprimirMensaje() {
+			Console.WriteLine("--------------------");
+			foreach (string line in this.infoList) {
+				Console.WriteLine(line);
+			}
+			Console.WriteLine("--------------------");
 		}
 	}
 }

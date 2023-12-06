@@ -8,6 +8,7 @@ namespace proyecto_final
 		}
         public void ImprimirMensaje()
         {
+			Console.WriteLine("...");
         }
     }
 }
