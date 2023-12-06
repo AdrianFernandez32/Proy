@@ -1,0 +1,82 @@
+﻿[
+  {
+    "titulo": "Luces del Amanecer",
+    "imagen": "luces_amanecer.jpg",
+    "duracion": 4,
+    "prohibido_en_china": false,
+    "no_apto_para_todo_publico": false,
+    "artista": "Melodías Celestiales"
+  },
+  {
+    "titulo": "Ritmo de la Noche",
+    "imagen": "ritmo_noche.jpg",
+    "duracion": 3,
+    "prohibido_en_china": true,
+    "no_apto_para_todo_publico": true,
+    "artista": "Estrellas Urbanas"
+  },
+  {
+    "titulo": "Caminos del Viento",
+    "imagen": "caminos_viento.jpg",
+    "duracion": 5,
+    "prohibido_en_china": false,
+    "no_apto_para_todo_publico": false,
+    "artista": "Voces de la Tierra"
+  },
+  {
+    "titulo": "Caballera del Zodiaco",
+    "imagen": "ecos_futuro.jpg",
+    "duracion": 6,
+    "prohibido_en_china": true,
+    "no_apto_para_todo_publico": true,
+    "artista": "Adrian Fersa"
+  },
+  {
+    "titulo": "Sueños de Libertad",
+    "imagen": "sueños_libertad.jpg",
+    "duracion": 4,
+    "prohibido_en_china": false,
+    "no_apto_para_todo_publico": false,
+    "artista": "Almas Rebeldes"
+  },
+  {
+    "titulo": "Sombras y Luces",
+    "imagen": "sombras_luces.jpg",
+    "duracion": 3,
+    "prohibido_en_china": false,
+    "no_apto_para_todo_publico": false,
+    "artista": "Contrastes"
+  },
+  {
+    "titulo": "Melodía Perdida",
+    "imagen": "melodia_perdida.jpg",
+    "duracion": 5,
+    "prohibido_en_china": false,
+    "no_apto_para_todo_publico": true,
+    "artista": "Ecos del Silencio"
+  },
+  {
+    "titulo": "Baile de la Luna",
+    "imagen": "baile_luna.jpg",
+    "duracion": 4,
+    "prohibido_en_china": false,
+    "no_apto_para_todo_publico": false,
+    "artista": "Noche Estrellada"
+  },
+  {
+    "titulo": "Voces del Olvido",
+    "imagen": "voces_olvido.jpg",
+    "duracion": 6,
+    "prohibido_en_china": false,
+    "no_apto_para_todo_publico": true,
+    "artista": "Recuerdos"
+  },
+  {
+    "titulo": "Corazón de la Ciudad",
+    "imagen": "corazon_ciudad.jpg",
+    "duracion": 3,
+    "prohibido_en_china": false,
+    "no_apto_para_todo_publico": false,
+    "artista": "Sonidos Urbanos"
+  }
+]

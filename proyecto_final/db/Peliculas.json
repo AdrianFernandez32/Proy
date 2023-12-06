@@ -1,0 +1,72 @@
+﻿[
+  {
+    "titulo": "El Último Eclipse",
+    "imagen": "ultimo_eclipse.jpg",
+    "duracion": 120,
+    "prohibido_en_china": false,
+    "no_apto_para_todo_publico": true
+  },
+  {
+    "titulo": "Sombras en la Ciudad",
+    "imagen": "sombras_ciudad.jpg",
+    "duracion": 105,
+    "prohibido_en_china": false,
+    "no_apto_para_todo_publico": false
+  },
+  {
+    "titulo": "Corazones Valientes",
+    "imagen": "corazones_valientes.jpg",
+    "duracion": 140,
+    "prohibido_en_china": false,
+    "no_apto_para_todo_publico": false
+  },
+  {
+    "titulo": "El Misterio de la Mansión",
+    "imagen": "misterio_mansion.jpg",
+    "duracion": 130,
+    "prohibido_en_china": false,
+    "no_apto_para_todo_publico": true
+  },
+  {
+    "titulo": "Viaje a lo Desconocido",
+    "imagen": "viaje_desconocido.jpg",
+    "duracion": 115,
+    "prohibido_en_china": false,
+    "no_apto_para_todo_publico": false
+  },
+  {
+    "titulo": "Luz de la Esperanza",
+    "imagen": "luz_esperanza.jpg",
+    "duracion": 123,
+    "prohibido_en_china": false,
+    "no_apto_para_todo_publico": true
+  },
+  {
+    "titulo": "Guardianes del Tiempo",
+    "imagen": "guardianes_tiempo.jpg",
+    "duracion": 150,
+    "prohibido_en_china": false,
+    "no_apto_para_todo_publico": false
+  },
+  {
+    "titulo": "El Laberinto del Destino",
+    "imagen": "laberinto_destino.jpg",
+    "duracion": 110,
+    "prohibido_en_china": true,
+    "no_apto_para_todo_publico": true
+  },
+  {
+    "titulo": "Susurros del Pasado",
+    "imagen": "susurros_pasado.jpg",
+    "duracion": 135,
+    "prohibido_en_china": false,
+    "no_apto_para_todo_publico": false
+  },
+  {
+    "titulo": "Revolución Silenciosa",
+    "imagen": "revolucion_silenciosa.jpg",
+    "duracion": 128,
+    "prohibido_en_china": true,
+    "no_apto_para_todo_publico": true
+  }
+]
