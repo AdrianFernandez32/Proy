@@ -1,3 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using proyecto_final;
+
+
+ManagerContenido ventana = new ManagerContenido();
+
+ventana.RunApp();
 
