@@ -3,70 +3,70 @@
     "titulo": "Misterios de la Galaxia",
     "imagen": "misterios_galaxia.jpg",
     "duracion": 50,
-    "prohibido_en_china": false,
-    "no_apto_para_todo_publico": true
+    "restricted": false,
+    "matureContent": true
   },
   {
     "titulo": "Las Calles del Ayer",
     "imagen": "calles_ayer.jpg",
     "duracion": 45,
-    "prohibido_en_china": true,
-    "no_apto_para_todo_publico": false
+    "restricted": true,
+    "matureContent": false
   },
   {
     "titulo": "Sombras del Destino",
     "imagen": "sombras_destino.jpg",
     "duracion": 55,
-    "prohibido_en_china": false,
-    "no_apto_para_todo_publico": true
+    "restricted": false,
+    "matureContent": true
   },
   {
     "titulo": "Ecos de la Historia",
     "imagen": "ecos_historia.jpg",
     "duracion": 60,
-    "prohibido_en_china": false,
-    "no_apto_para_todo_publico": false
+    "restricted": false,
+    "matureContent": false
   },
   {
     "titulo": "Laberintos del Tiempo",
     "imagen": "laberintos_tiempo.jpg",
     "duracion": 50,
-    "prohibido_en_china": true,
-    "no_apto_para_todo_publico": true
+    "restricted": true,
+    "matureContent": true
   },
   {
     "titulo": "Voces en la Niebla",
     "imagen": "voces_niebla.jpg",
     "duracion": 40,
-    "prohibido_en_china": false,
-    "no_apto_para_todo_publico": false
+    "restricted": false,
+    "matureContent": false
   },
   {
     "titulo": "Luces y Sombras",
     "imagen": "luces_sombras.jpg",
     "duracion": 48,
-    "prohibido_en_china": false,
-    "no_apto_para_todo_publico": true
+    "restricted": false,
+    "matureContent": true
   },
   {
     "titulo": "Crónicas del Futuro",
     "imagen": "cronicas_futuro.jpg",
     "duracion": 52,
-    "prohibido_en_china": false,
-    "no_apto_para_todo_publico": false
+    "restricted": false,
+    "matureContent": false
   },
   {
     "titulo": "El Último Viajero",
     "imagen": "ultimo_viajero.jpg",
     "duracion": 47,
-    "prohibido_en_china": false,
-    "no_apto_para_todo_publico": true
+    "restricted": false,
+    "matureContent": true
   },
   {
     "titulo": "Historias del Olvido",
     "imagen": "historias_olvido.jpg",
     "duracion": 53,
-    "prohibido_en_china": false,
-    "no_apto_para_todo_publico": false
+    "restricted": false,
+    "matureContent": false
   }
 ]

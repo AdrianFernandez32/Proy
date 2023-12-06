@@ -3,70 +3,70 @@
     "titulo": "Viaje al Centro de la Historia",
     "imagen": "viaje_centro_historia.jpg",
     "duracion": 480,
-    "prohibido_en_china": false,
-    "no_apto_para_todo_publico": false
+    "restricted": false,
+    "matureContent": false
   },
   {
     "titulo": "Secretos del Océano Profundo",
     "imagen": "secretos_oceano.jpg",
     "duracion": 300,
-    "prohibido_en_china": true,
-    "no_apto_para_todo_publico": false
+    "restricted": true,
+    "matureContent": false
   },
   {
     "titulo": "Estrellas Lejanas",
     "imagen": "estrellas_lejanas.jpg",
     "duracion": 550,
-    "prohibido_en_china": false,
-    "no_apto_para_todo_publico": true
+    "restricted": false,
+    "matureContent": true
   },
   {
     "titulo": "El Arte de la Guerra Moderna",
     "imagen": "arte_guerra_moderna.jpg",
     "duracion": 360,
-    "prohibido_en_china": true,
-    "no_apto_para_todo_publico": false
+    "restricted": true,
+    "matureContent": false
   },
   {
     "titulo": "Misterios de la Antigüedad",
     "imagen": "misterios_antiguedad.jpg",
     "duracion": 420,
-    "prohibido_en_china": false,
-    "no_apto_para_todo_publico": true
+    "restricted": false,
+    "matureContent": true
   },
   {
     "titulo": "Cuentos de la Luna",
     "imagen": "cuentos_luna.jpg",
     "duracion": 270,
-    "prohibido_en_china": false,
-    "no_apto_para_todo_publico": false
+    "restricted": false,
+    "matureContent": false
   },
   {
     "titulo": "Las Aventuras de Marco Polo",
     "imagen": "aventuras_marco_polo.jpg",
     "duracion": 600,
-    "prohibido_en_china": false,
-    "no_apto_para_todo_publico": true
+    "restricted": false,
+    "matureContent": true
   },
   {
     "titulo": "Enigmas de Civilizaciones Perdidas",
     "imagen": "enigmas_civilizaciones.jpg",
     "duracion": 450,
-    "prohibido_en_china": false,
-    "no_apto_para_todo_publico": false
+    "restricted": false,
+    "matureContent": false
   },
   {
     "titulo": "La Revolución Digital",
     "imagen": "revolucion_digital.jpg",
     "duracion": 390,
-    "prohibido_en_china": false,
-    "no_apto_para_todo_publico": true
+    "restricted": false,
+    "matureContent": true
   },
   {
     "titulo": "Historias del Futuro",
     "imagen": "historias_futuro.jpg",
     "duracion": 320,
-    "prohibido_en_china": false,
-    "no_apto_para_todo_publico": false
+    "restricted": false,
+    "matureContent": false
   }
 ]

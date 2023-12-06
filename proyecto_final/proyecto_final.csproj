@@ -8,9 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="db\" />
+    <None Remove="info\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="db\" />
+    <Folder Include="info\" />
   </ItemGroup>
 </Project>
