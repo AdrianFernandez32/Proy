@@ -5,7 +5,7 @@ namespace proyecto_final
 {
 	public class ManagerContenido
 	{
-		IPlugin[] PluginLIst;
+		private IPlugin[] PluginLIst;
 
         private IStrategy _estrategiaActual;
         private readonly string _articulosJsonPath = "./info/DutyFree/Articulos.json";
@@ -20,11 +20,17 @@ namespace proyecto_final
 		{
 		}
 
-		public void AplicarPlugins() { 
+		public List<T> AplicarPlugins<T>(List<T>contenido) where T: StreamingService
+        { 
 			foreach(IPlugin plugin in PluginLIst) {
-				//hacer cosas aqui 
+                contenido = plugin.AplicarPlugin(contenido);
 			}
+            return contenido;
 		}
+
+        public void AddPlugin(IPlugin plugin) {
+            PluginLIst.Append(plugin);
+        }
 
         public void RunApp()
         {
@@ -207,6 +213,9 @@ namespace proyecto_final
             }
 
             MostrarMensaje(new string[] { "Seleccione el contenido que desea ver:" });
+            //apply filters
+            contenidos = this.AplicarPlugins(contenidos);
+
             for (int i = 0; i < contenidos.Count; i++)
             {
                 T contenido = contenidos[i];

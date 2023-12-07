@@ -3,7 +3,7 @@ namespace proyecto_final
 {
 	public interface IPlugin
 	{
-		public void AplicarPlugin();
+		public List<T> AplicarPlugin<T>(List<T> contenido);
 	}
 
 }
