@@ -51,10 +51,12 @@ namespace proyecto_final
 
         private int ImprimirMenuPrincipal()
         {
-            Console.WriteLine("Seleccione una opción:");
-            Console.WriteLine("1) Información");
-            Console.WriteLine("2) Compras");
-            Console.WriteLine("3) Entretenimiento");
+            MostrarMensaje(new string[] {
+                "Seleccione una opción:",
+                "1) Información",
+                "2) Compras",
+                "3) Entretenimiento"
+            });
             Console.Write("Opción: ");
             if (int.TryParse(Console.ReadLine(), out int seleccion))
             {
@@ -65,9 +67,11 @@ namespace proyecto_final
 
         private void SeleccionarEstrategiaInformacion()
         {
-            Console.WriteLine("Seleccione el tipo de información:");
-            Console.WriteLine("1) Información de Vuelo");
-            Console.WriteLine("2) Información de Destino");
+            MostrarMensaje(new string[] {
+                "Seleccione el tipo de información:",
+                "1) Información de Vuelo",
+                "2) Información de Destino"
+            });
             Console.Write("Opción: ");
             if (int.TryParse(Console.ReadLine(), out int seleccion))
             {
@@ -82,14 +86,14 @@ namespace proyecto_final
                         _estrategiaActual = new InformacionStrategy(infoDestino);
                         break;
                     default:
-                        Console.WriteLine("Opción no válida, intente de nuevo.");
+                        MostrarMensaje(new string[] { "Opción no válida, intente de nuevo." });
                         return;
                 }
                 _estrategiaActual.Execute();
             }
             else
             {
-                Console.WriteLine("Entrada no válida.");
+                MostrarMensaje(new string[] { "Entrada no válida." });
             }
         }
 
@@ -97,49 +101,57 @@ namespace proyecto_final
         {
             var carritoCompra = new CarritoCompra();
             var articulos = JsonLoader.LoadArticulos();
-            Console.WriteLine("Seleccione los artículos que desea añadir al carrito:");
+            MostrarMensaje(new string[] { "Seleccione los artículos que desea añadir al carrito (presione Enter para finalizar):" });
             for (int i = 0; i < articulos.Count; i++)
             {
-                Console.WriteLine($"{i + 1}) {articulos[i].Nombre} - ${articulos[i].Precio}");
-            }
-            Console.WriteLine("Ingrese los números de los artículos separados por comas o 'checkout' para finalizar:");
-            string input = Console.ReadLine();
-            if (input.ToLower() == "checkout")
-            {
-                // Ejecutar estrategia de checkout
-                _estrategiaActual = new ComprasStrategy(carritoCompra);
-                _estrategiaActual.Execute();
-                return;
+                MostrarMensaje(new string[] { $"{i + 1}) {articulos[i].Nombre} - ${articulos[i].Precio}" });
             }
 
-            var indicesSeleccionados = input.Split(',');
-            foreach (var indice in indicesSeleccionados)
+            while (true)
             {
-                if (int.TryParse(indice.Trim(), out int indiceArticulo))
+                MostrarMensaje(new string[] { "Ingrese los números de los artículos separados por comas o presione Enter para finalizar:" });
+                string input = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(input))
                 {
-                    if (indiceArticulo >= 1 && indiceArticulo <= articulos.Count)
+                    _estrategiaActual = new ComprasStrategy(carritoCompra);
+                    _estrategiaActual.Execute();
+                    MostrarMensaje(new string[] { "Compra finalizada con éxito." });
+                    break;
+                }
+
+                var indicesSeleccionados = input.Split(',');
+                foreach (var indice in indicesSeleccionados)
+                {
+                    if (int.TryParse(indice.Trim(), out int indiceArticulo))
                     {
-                        carritoCompra.AddItem(articulos[indiceArticulo - 1]);
+                        if (indiceArticulo >= 1 && indiceArticulo <= articulos.Count)
+                        {
+                            carritoCompra.AddItem(articulos[indiceArticulo - 1]);
+                            MostrarMensaje(new string[] { $"Artículo {indiceArticulo} añadido al carrito." });
+                        }
+                        else
+                        {
+                            MostrarMensaje(new string[] { $"Artículo {indiceArticulo} no válido." });
+                        }
                     }
                     else
                     {
-                        Console.WriteLine($"Artículo {indiceArticulo} no válido.");
+                        MostrarMensaje(new string[] { $"Entrada '{indice}' no válida." });
                     }
-                }
-                else
-                {
-                    Console.WriteLine($"Entrada '{indice}' no válida.");
                 }
             }
         }
 
         private void SeleccionarEstrategiaEntretenimiento()
         {
-            Console.WriteLine("Seleccione el tipo de entretenimiento:");
-            Console.WriteLine("1) Audiolibros");
-            Console.WriteLine("2) Música");
-            Console.WriteLine("3) Películas");
-            Console.WriteLine("4) Series de televisión");
+            MostrarMensaje(new string[] {
+                "Seleccione el tipo de entretenimiento:",
+                "1) Audiolibros",
+                "2) Música",
+                "3) Películas",
+                "4) Series de televisión"
+            });
             Console.Write("Opción: ");
             if (int.TryParse(Console.ReadLine(), out int seleccion))
             {
@@ -158,13 +170,13 @@ namespace proyecto_final
                         MostrarContenido<Serie>();
                         break;
                     default:
-                        Console.WriteLine("Opción no válida, intente de nuevo.");
+                        MostrarMensaje(new string[] { "Opción no válida, intente de nuevo." });
                         break;
                 }
             }
             else
             {
-                Console.WriteLine("Entrada no válida.");
+                MostrarMensaje(new string[] { "Entrada no válida." });
             }
         }
 
@@ -194,11 +206,11 @@ namespace proyecto_final
                 return;
             }
 
-            Console.WriteLine("Seleccione el contenido que desea ver:");
+            MostrarMensaje(new string[] { "Seleccione el contenido que desea ver:" });
             for (int i = 0; i < contenidos.Count; i++)
             {
                 T contenido = contenidos[i];
-                Console.WriteLine($"{i + 1}) {contenido.Titulo} - Duración: {contenido.Duracion} minutos");
+                MostrarMensaje(new string[] { $"{i + 1}) {contenido.Titulo} - Duración: {contenido.Duracion} minutos" });
             }
             Console.Write("Opción: ");
             if (int.TryParse(Console.ReadLine(), out int seleccion) && seleccion >= 1 && seleccion <= contenidos.Count)
@@ -213,7 +225,15 @@ namespace proyecto_final
             }
         }
 
+        private void MostrarMensaje(string[] mensajes)
+        {
+            ProxyMensaje proxyMensaje = new ProxyMensaje();
+            proxyMensaje.ImprimirMensaje();  // Muestra mensaje de carga
+            System.Threading.Thread.Sleep(2000);  // Espera 2 segundos
 
+            Mensaje mensaje = new Mensaje(mensajes);
+            mensaje.ImprimirMensaje();  // Muestra el mensaje real
+        }
     }
 }
 
