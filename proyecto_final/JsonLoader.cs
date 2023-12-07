@@ -7,13 +7,13 @@ namespace proyecto_final
 {
     public static class JsonLoader
     {
-        private const string ArticulosJsonPath = "info/DutyFree/Articulos.json";
-        private const string AudiolibrosJsonPath = "info/Entretainment/Audiolibros.json";
-        private const string CancionesJsonPath = "info/Entretainment/Canciones.json";
-        private const string PeliculasJsonPath = "info/Entretainment/Peliculas.json";
-        private const string SeriesJsonPath = "info/Entretainment/Series.json";
-        private const string InfoVueloJsonPath = "info/info/InfoVuelo.json";
-        private const string InfoDestinoJsonPath = "info/info/InfoDestino.json";
+        private const string ArticulosJsonPath = "../../../info/DutyFree/Articulos.json";
+        private const string AudiolibrosJsonPath = "../../..//info/Entretainment/Audiolibros.json";
+        private const string CancionesJsonPath = "../../../info/Entretainment/Canciones.json";
+        private const string PeliculasJsonPath = "../../..//info/Entretainment/Peliculas.json";
+        private const string SeriesJsonPath = "../../..//info/Entretainment/Series.json";
+        private const string InfoVueloJsonPath = "../../../info/info/InfoVuelo.json";
+        private const string InfoDestinoJsonPath = "../../../info/info/InfoDestino.json";
 
         public static List<Item> LoadArticulos()
         {
