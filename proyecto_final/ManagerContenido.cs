@@ -18,7 +18,8 @@ namespace proyecto_final
 
         public ManagerContenido()
 		{
-		}
+            this.PluginLIst = new IPlugin[]{};
+        }
 
 		public List<T> AplicarPlugins<T>(List<T>contenido) where T: StreamingService
         { 
@@ -214,7 +215,9 @@ namespace proyecto_final
 
             MostrarMensaje(new string[] { "Seleccione el contenido que desea ver:" });
             //apply filters
-            contenidos = this.AplicarPlugins(contenidos);
+            if(PluginLIst.Length > 0) { 
+                contenidos = this.AplicarPlugins(contenidos);
+	        }
 
             for (int i = 0; i < contenidos.Count; i++)
             {
