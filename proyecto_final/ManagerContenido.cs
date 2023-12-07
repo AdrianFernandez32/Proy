@@ -1,10 +1,20 @@
 ﻿using System;
+using proyecto_final;
+
 namespace proyecto_final
 {
 	public class ManagerContenido
 	{
 		IPlugin[] PluginLIst;
+
         private IStrategy _estrategiaActual;
+        private readonly string _articulosJsonPath = "./info/DutyFree/Articulos.json";
+        private readonly string _audiolibrosJsonPath = "./info/Entretainment/Audiolibros.json";
+        private readonly string _cancionesJsonPath = "./info/Entretainment/Canciones.json";
+        private readonly string _peliculasJsonPath = "./info/Entretainment/Peliculas.json";
+        private readonly string _seriesJsonPath = "./info/Entretainment/Series.json";
+        private readonly string _infoVueloJsonPath = "./info/info/InfoVuelo.json";
+        private readonly string _infoDestinoJsonPath = "./info/info/InfoDestino.json";
 
         public ManagerContenido()
 		{
@@ -53,8 +63,6 @@ namespace proyecto_final
             return -1;
         }
 
-        // Dentro de ManagerContenido.cs
-
         private void SeleccionarEstrategiaInformacion()
         {
             Console.WriteLine("Seleccione el tipo de información:");
@@ -66,11 +74,11 @@ namespace proyecto_final
                 switch (seleccion)
                 {
                     case 1:
-                        var infoVuelo = InformacionVuelo.LoadFromJson("InfoVuelo.json");
+                        var infoVuelo = JsonLoader.LoadInformacionVuelo();
                         _estrategiaActual = new InformacionStrategy(infoVuelo);
                         break;
                     case 2:
-                        var infoDestino = InformacionDestino.LoadFromJson("InfoDestino.json");
+                        var infoDestino = JsonLoader.LoadInformacionDestino();
                         _estrategiaActual = new InformacionStrategy(infoDestino);
                         break;
                     default:
@@ -85,12 +93,10 @@ namespace proyecto_final
             }
         }
 
-        // Dentro de ManagerContenido.cs
-
         private void SeleccionarEstrategiaCompras()
         {
             var carritoCompra = new CarritoCompra();
-            var articulos = JsonLoader.LoadFromJson<List<Item>>("Articulos.json");
+            var articulos = JsonLoader.LoadArticulos();
             Console.WriteLine("Seleccione los artículos que desea añadir al carrito:");
             for (int i = 0; i < articulos.Count; i++)
             {
@@ -127,8 +133,6 @@ namespace proyecto_final
             }
         }
 
-        // Dentro de ManagerContenido.cs
-
         private void SeleccionarEstrategiaEntretenimiento()
         {
             Console.WriteLine("Seleccione el tipo de entretenimiento:");
@@ -142,16 +146,16 @@ namespace proyecto_final
                 switch (seleccion)
                 {
                     case 1:
-                        MostrarContenido<Audiolibro>("Audiolibros.json");
+                        MostrarContenido<Audiolibro>();
                         break;
                     case 2:
-                        MostrarContenido<Cancion>("Canciones.json");
+                        MostrarContenido<Cancion>();
                         break;
                     case 3:
-                        MostrarContenido<Pelicula>("Peliculas.json");
+                        MostrarContenido<Pelicula>();
                         break;
                     case 4:
-                        MostrarContenido<Serie>("Series.json");
+                        MostrarContenido<Serie>();
                         break;
                     default:
                         Console.WriteLine("Opción no válida, intente de nuevo.");
@@ -164,9 +168,32 @@ namespace proyecto_final
             }
         }
 
-        private void MostrarContenido<T>(string jsonPath) where T : StreamingService
+        private void MostrarContenido<T>() where T : StreamingService, new()
         {
-            var contenidos = JsonLoader.LoadFromJson<List<T>>(jsonPath);
+            List<T> contenidos;
+
+            if (typeof(T) == typeof(Audiolibro))
+            {
+                contenidos = JsonLoader.LoadAudiolibros() as List<T>;
+            }
+            else if (typeof(T) == typeof(Cancion))
+            {
+                contenidos = JsonLoader.LoadCanciones() as List<T>;
+            }
+            else if (typeof(T) == typeof(Pelicula))
+            {
+                contenidos = JsonLoader.LoadPeliculas() as List<T>;
+            }
+            else if (typeof(T) == typeof(Serie))
+            {
+                contenidos = JsonLoader.LoadSeries() as List<T>;
+            }
+            else
+            {
+                Console.WriteLine("Tipo de contenido no soportado.");
+                return;
+            }
+
             Console.WriteLine("Seleccione el contenido que desea ver:");
             for (int i = 0; i < contenidos.Count; i++)
             {
@@ -177,13 +204,15 @@ namespace proyecto_final
             if (int.TryParse(Console.ReadLine(), out int seleccion) && seleccion >= 1 && seleccion <= contenidos.Count)
             {
                 T contenidoSeleccionado = contenidos[seleccion - 1];
-                Console.WriteLine($"Reproduciendo: {contenidoSeleccionado.Titulo}");
+                string resultadoReproduccion = contenidoSeleccionado.Play();
+                Console.WriteLine(resultadoReproduccion);
             }
             else
             {
                 Console.WriteLine("Opción no válida.");
             }
         }
+
 
     }
 }

@@ -5,8 +5,10 @@ namespace proyecto_final
 {
     public class Cancion : StreamingService
     {
-        [JsonProperty("artista")]
-        public string Artista { get; set; }
+        public override string Play()
+        {
+            return $"Reproduciendo Canción: {Titulo}";
+        }
     }
 }
 

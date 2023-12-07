@@ -19,7 +19,10 @@ namespace proyecto_final
 
         public override void ShowInfo()
         {
-            // no hay nada aun
+            Console.WriteLine($"Número de Vuelo: {NumeroDeVuelo}");
+            Console.WriteLine($"Aerolínea: {Aerolinea}");
+            Console.WriteLine($"Hora de Salida: {HoraDeSalida}");
+            Console.WriteLine($"Estado del Vuelo: {EstadoDelVuelo}");
         }
 
         public static InformacionVuelo LoadFromJson(string filePath)
@@ -28,6 +31,5 @@ namespace proyecto_final
             return JsonConvert.DeserializeObject<InformacionVuelo>(jsonData);
         }
     }
-
 }
 

@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace proyecto_final
 {
-    public class StreamingService
+    public abstract class StreamingService
     {
         [JsonProperty("titulo")]
         public string Titulo { get; set; }
@@ -19,6 +19,9 @@ namespace proyecto_final
 
         [JsonProperty("matureContent")]
         public bool MatureContent { get; set; }
+
+        public abstract string Play();
     }
 }
+
 

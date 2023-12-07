@@ -1,9 +1,15 @@
 ﻿using System;
+using proyecto_final;
+
 namespace proyecto_final
 {
     public class Serie : StreamingService
     {
-        // Puedes añadir propiedades específicas de series aquí si las hay
+        public override string Play()
+        {
+            return $"Reproduciendo serie: {Titulo}";
+        }
     }
 }
+
 
